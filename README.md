@@ -13,7 +13,7 @@
 - Мастерская: оповещение
 - Мастерская: «надоедалка» подписки
   - Bootstrap для CSS
-  - Bootstrap Native для JS
+  - Bootstrap Native для JS (https://thednp.github.io/bootstrap.native)
 - Встроенный объект Date
   - Создание
   - Разница времени

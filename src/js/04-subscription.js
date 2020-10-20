@@ -1,4 +1,25 @@
 import '../css/common.css';
+
+// const PROMPT_DELAY = 3000;
+// const MAX_PROMPT_ATTEMPTS = 3;
+
+// let promptCounter = 0;
+// let hasSubscribed = false;
+
+// const intervalId =  setInterval(() => {
+//   if (promptCounter === MAX_PROMPT_ATTEMPTS || hasSubscribed) {
+//     console.log('Нужно остановить интервал');
+//     clearInterval(intervalId);
+//     return;
+//   }
+
+
+//   console.log('Подпишись на рассылку! - ' + Date.now());
+//   promptCounter += 1;
+// }, PROMPT_DELAY)
+
+//===========================================================
+
 import BSN from 'bootstrap.native';
 
 const refs = {
@@ -24,12 +45,12 @@ function openModal() {
 
   setTimeout(() => {
     console.log('Открываем надоедалку');
-    modal.show();
-    promptCounter += 1;
+      modal.show();
+      promptCounter += 1;
   }, PROMPT_DELAY);
 }
 
-function onSubscribeBtnClick() {
-  hasSubscribed = true;
+function onSubscribeBtnClick () {
+ hasSubscribed = true;
   modal.hide();
 }

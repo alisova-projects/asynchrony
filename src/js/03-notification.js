@@ -14,6 +14,8 @@ const refs = {
 };
 
 refs.notification.addEventListener('click', onNotificationClick);
+refs.notification.addEventListener('mouseenter', onMouseEnter);
+refs.notification.addEventListener('mouseleave', onMouseLeave);
 
 showNotification();
 
@@ -29,9 +31,21 @@ function showNotification() {
   refs.notification.classList.add('is-visible');
 
   timeoutId = setTimeout(() => {
-    console.log('Закрываем алерт автоматически чтобы не висел');
+    console.log('Закрываем алерт автоматически, чтобы не висел');
     hideNotification();
   }, NOTIFICATION_DELAY);
+}
+
+function onMouseLeave() {
+  setTimeout(() => {
+    console.log('Закрываем алерт автоматически, чтобы не висел');
+    hideNotification();
+  }, NOTIFICATION_DELAY);
+};
+
+function onMouseEnter() {
+  clearTimeout(timeoutId);
+  refs.notification.classList.add('is-visible');
 }
 
 function hideNotification() {
